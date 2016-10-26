@@ -1,0 +1,394 @@
+﻿@model IEnumerable<wtyler_Blog.Models.BlogPost>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Tyler's Blog</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="nileforest">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <!-- Favicone Icon -->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="img/favicon.png">
+
+        <!-- CSS -->
+        <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/font-awesome.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/ionicons.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/plugin/sidebar-menu.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/plugin/animate.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Preloader -->
+        <section id="preloader">
+            <div class="loader" id="loader">
+                <div class="loader-img"></div>
+            </div>
+        </section>
+        <!-- End Preloader -->
+        <!-- Search Overlay Menu -->
+        <div class="search-overlay-menu">
+            <span class="search-overlay-close"><i class="ion ion-ios-close-empty"></i></span>
+            <form role="search" id="searchform" action="" method="get">
+                <input value="" name="q" type="search" placeholder="Search..." />
+                <button type="submit"><i class="ion ion-ios-search"></i></button>
+            </form>
+        </div>
+        <!-- End Search Overlay Menu -->
+        <!-- Sidemenu -->
+        <section id="pushmenu-right" class="pushmenu pushmenu-right side-menu">
+    <a id="menu-sidebar-close-icon" class="menu-close"><i class="ion ion-android-close"></i></a>
+    <h5 class="white">Sign In</h5>
+    <div class="sign-in">
+   
+                        </div>
+                        <ul>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Home</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Portfolio</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Login & Signup</a></li>
+
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">About</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/)">Hire</a></li>
+
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Resume</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Shopping Cart</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Contact Me</a></li>
+                        </ul>
+            </section>
+        <!--End Sidemenu -->
+        <!-- Site Wraper -->
+        <div class="wrapper">
+
+            <!-- Header -->
+            <header id="header" class="header">
+                <div class="container header-inner">
+
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="logo-light" src="~/img/TylerLogo.png" alt="Tyler" />
+                            <img class="logo-dark" src="~/img/TylerLogo.png" alt="Tyler" />
+                        </a>
+                    </div>
+                    <!-- End Logo -->
+                    <!-- Rightside Menu (Search, Cart, Bart icon) -->
+                    <div class="side-menu-btn">
+                        <ul>
+                            <!-- Search Icon -->
+                            <li class="">
+                                <a class="search-overlay-menu-btn header-icon"><i class="fa fa-search"></i></a>
+                            </li>
+                            <!-- End Search Icon -->
+                            <!-- Cart Icon -->
+                            <li class="cart">
+                                <a class="header-icon" href=""http://wtyler-portfolio.azurewebsites.net/">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <div class="cart-notification-wrap"></span></div>
+                                </a>
+                                <!-- Cart Dropdown -->
+                                <div class="cart-dropdown">
+
+
+                                    <div class="clearfix"></div>
+                                    <div class="cart-checkout-btn">
+                                        <a href=""http://wtyler-portfolio.azurewebsites.net/" class="btn btn-md btn-color-b form-full checkout">Checkout</a>
+                                    </div>
+                                </div>
+                                <!-- End Cart Dropdown -->
+                            </li>
+                            <!-- End Cart Icon -->
+                            <!--Sidebar Menu Icon-->
+                            <li class="">
+                                <a id="menu-sidebar-list-icon" class="nav-bar-icon"><span></span></a>
+                            </li>
+                            <!-- End Sidebar Menu Icon-->
+                        </ul>
+                    </div>
+                    <!-- End Rightside Menu -->
+                    <!-- Mobile Navbar Icon -->
+                    <div class="nav-mobile nav-bar-icon">
+                        <span></span>
+                    </div>
+                    <!-- End Mobile Navbar Icon -->
+                    <!-- Navbar Navigation -->
+                    <div class="nav-menu">
+                        <ul class="nav-menu-inner">
+                            <!--Nav Header 1st Home-->
+                            <li>
+                                <a href="http://wtyler-portfolio.azurewebsites.net"> Home </a>
+                                <!-- Dropdown -->
+                                <!-- End Dropdown -->
+                            </li>
+                            <!--Nav Header 2nd About Me -->
+                            <li>
+                                <a href="http://wtyler-portfolio.azurewebsites.net">About Me </a>
+                                <!-- Dropdown -->
+                                <!-- End Dropdown -->
+                            </li>
+                            <!--Nav Header 3rd Portfolio-->
+                            <li>
+                                <a href="http://wtyler-portfolio.azurewebsites.net">Portfolio</a>
+                                <!-- Dropdown -->
+                                <!-- End Dropdown -->
+                            </li>
+                            <!--Nav Header 4th Resume-->
+                            <li>
+                                <a href="http://wtyler-portfolio.azurewebsites.net">Resume </a>
+                                <!-- Dropdown -->
+                                <!-- End Dropdown -->
+                            </li>
+                            <!--Nav Header 5th Elements -->
+                            <!--Nav Header 6th Blog -->
+                            <li>
+                                <a href="http://wtyler-portfolio.azurewebsites.net">Blog </a>
+                                <!-- Dropdown -->
+                                <!-- End Dropdown -->
+                            </li>
+                            <!--Nav Header 7th Hire-->
+                            <li>
+                                <a href="http://wtyler-portfolio.azurewebsites.net">Hire </a>
+                                <!-- Dropdown -->
+                                <!-- End Dropdown -->
+                            </li>
+                            <!-- Nav Header 8th Contact-->
+                            <li>
+                                <a href="http://wtyler-portfolio.azurewebsites.net">Contact </a>
+                                <!-- Dropdown -->
+                                <!-- End Dropdown -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Navbar Navigation -->
+
+                </div>
+            </header>
+
+            <!-- End Header -->
+            <!-- CONTENT --------------------------------------------------------------------------------->
+            <!-- Intro Section -->
+            <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1" data-background-img="img/full/26.jpg">
+                <div class="container">
+                    <div class="row title">
+                        <h2 class="h2">Blog</h2>
+                        <div class="page-breadcrumb">
+                            <a>Home</a>/<a>Blog</a>/<span>1 Columns</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Intro Section -->
+            <!-- Blog Post Section -->
+  
+            <section class="ptb ptb-sm-80">
+                <div class="container">
+                  
+                       
+                   
+                        <!-- Post Item -->
+                           @foreach (var item in Model)
+                        {
+                        <div class="col-lg-9 col-md-9">
+                         
+                            <div class="row">
+                                <div class="col-md-12 blog-post-hr">
+                                    <div class="blog-post mb-30">
+                                        <div class="post-media">
+                                            <img src="~/img/full/10.jpg" alt="" />
+                                        </div>
+                          
+                                        <div class="post-meta"><span>@Html.DisplayFor(modelItem => item.Created)</span></div>
+                                        <div class="post-header">
+                                            <h4>@Html.DisplayFor(modelItem => item.Title)</h4>
+                                        </div>
+                                        <div class="post-entry">
+                                            <p>@Html.Raw(item.Body)</p>
+                                        </div>
+                                        <div class="post-tag pull-left"><b>Last Update</b> @Html.DisplayFor(modelItem=> item.Updated)</div>
+                                        <div class="post-more-link pull-right">@Html.ActionLink("Read More", "blogDetails", new { id = item.Id });<i class="fa fa-long-arrow-right right"></i></div>
+                                    </div>
+                                </div>
+                               <hr />
+                            </div>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                @Html.ActionLink(" Edit ", "Edit", new { id = item.Id });
+                                @Html.ActionLink(" Details ", "Details", new { id = item.Id });
+                                @Html.ActionLink(" Delete ", "Delete", new { id = item.Id });
+                            } 
+                      </div>
+                      
+                    }
+                     <!-- Sidebar -->
+                        <div class="col-lg-3 col-md-3 mt-sm-60">
+
+                            <div class="sidebar-widget">
+                                <h5>Search</h5>
+                                <div class="widget-search">
+                                    <input class="form-full input-lg" type="text" value="" placeholder="Search Here" name="search" id="wid-search">
+                                    <input type="submit" value="" name="email" id="wid-s-sub">
+                                </div>
+                            </div>
+
+                            <div class="sidebar-widget">
+                                <h5>Categories</h5>
+                                <hr>
+                                <ul>
+                                    <li><a>Full Stack Developer</a></li>
+                                    
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-widget">
+                                <h5>Recent Post</h5>
+                                
+                            </div>
+
+                           
+
+                        </div>
+                        <!-- End Sidebar -->
+                    <div class="row">
+                           <!-- Pagination Nav -->
+                           <div class="pagination-nav text-left mt-60 mtb-xs-30">
+                               <ul>
+                                   <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                   <li class="active"><a href="#">1</a></li>
+                                   <li><a href="#">2</a></li>
+                                   <li><a href="#">3</a></li>
+                                   <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                               </ul>
+                           </div>
+                           <!-- End Pagination Nav -->
+
+                    </div>
+                        <!-- End Post Item -->
+                       
+                </div>
+           </div>
+           
+            <!-- End Blog Post Section -->
+            <!-- End CONTENT ------------------------------------------------------------------------------>
+            <!-- FOOTER -->
+        <footer class="footer pt-80">
+            <div class="container">
+                <div class="row mb-60">
+                    <!-- Logo -->
+                    <div class="col-md-3 col-sm-3 col-xs-12 mb-xs-30">
+                        <a class="footer-logo" href="@Url.Action("Index","Home")">
+                            <img src="~/img/TylerLogo.png" />
+                        </a>
+                    </div>
+                    <!-- Logo -->
+                    <!-- Newsletter -->
+                    <div class="col-md-4 col-sm-5 col-xs-12 mb-xs-30">
+                        <div class="newsletter">
+                            <form>
+                                <input type="email" class="newsletter-input input-md newsletter-input mb-0" placeholder="Enter Your Email">
+                                <button class="newsletter-btn btn btn-xs btn-white" type="submit" value=""><i class="fa fa-angle-right mr-0"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End Newsletter -->
+                    <!-- Social -->
+                    <div class="col-md-3 col-md-offset-2 col-sm-4 col-xs-12">
+                        <ul class="social">
+                            <li><a target="_blank" href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a target="_blank" href="https://linkin.com/"><i class="fa fa-linkedin-square"></i></a></li>
+
+                        </ul>
+                    </div>
+                    <!-- End Social -->
+                </div>
+                <!--Footer Info -->
+                <div class="row footer-info mb-60">
+                    <div class="col-md-3 col-sm-12 col-xs-12 mb-sm-30">
+                        <p class="mb-xs-0">.Net Developer looking to grow and help your company</p>
+                        <a class="btn-link-a" href="http://wtyler-portfolio.azurewebsites.net/">Read More</a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30 mb-xs-0">
+                        <ul class="link">
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Blog</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Portfolio</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Login & Signup</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">About</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30">
+                        <ul class="link">
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Contact Us</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Resume</a></li>
+                            <li> <a href="http://wtyler-portfolio.azurewebsites.net/">Hire</a></li>
+                            <li><a href="http://wtyler-portfolio.azurewebsites.net/">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <p>1234 Richmond City rd Richmond,Va</p>
+                        <ul class="link-small">
+                            <li><a href="mailto:weltontylerii@gmail.com"><i class="fa fa-envelope-o left"></i>Email Me</a></li>
+                            <li><a><i class="fa fa-phone left"></i>(434)000-0000</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Footer Info -->
+            </div>
+
+            <hr />
+
+            <!-- Copyright Bar -->
+            <section class="copyright ptb-60">
+                <div class="container">
+                    <p class="">
+                        © 2016 <a><b>Tyler Studio</b></a>. All Rights Reserved.
+                        <br />
+                        <a target="_blank" href="@Url.Action("Index","Home")"><b></b></a>
+                    </p>
+                </div>
+            </section>
+            <!-- End Copyright Bar -->
+
+        </footer>
+        <!-- END FOOTER -->
+        <!-- Scroll Top -->
+        <a class="scroll-top">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+            <!-- End Scroll Top -->
+
+        </div>
+        <!-- Site Wraper End -->
+        <!-- JS -->
+
+        <script src="~/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+        <script src="~/js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/jquery.easing.js" type="text/javascript"></script>
+        <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/jquery.flexslider.js" type="text/javascript"></script>
+        <script src="~/js/plugin/jquery.fitvids.js" type="text/javascript"></script>
+        <script src="~/js/plugin/jquery.viewportchecker.js" type="text/javascript"></script>
+        <script src="~/js/plugin/jquery.stellar.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/wow.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/jquery.colorbox-min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/owl.carousel.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/isotope.pkgd.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/jquery.fs.tipper.min.js" type="text/javascript"></script>
+        <script src="~/js/plugin/mediaelement-and-player.min.js"></script>
+        <script src="~/js/plugin/sidebar-menu.js" type="text/javascript"></script>
+        <script src="~/js/theme.js" type="text/javascript"></script>
+        <script src="~/js/navigation.js" type="text/javascript"></script>
+
+
+    </body>
+</html>
